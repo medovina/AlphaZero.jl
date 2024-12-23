@@ -14,7 +14,7 @@ netparams = NetLib.ResNetHP(
 
 self_play = SelfPlayParams(
   sim=SimParams(
-    num_games=128,
+    num_games=20,
     num_workers=1,
     batch_size=1,
     use_gpu=true,
