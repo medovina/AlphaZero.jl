@@ -14,9 +14,9 @@ netparams = NetLib.ResNetHP(
 
 self_play = SelfPlayParams(
   sim=SimParams(
-    num_games=256,
-    num_workers=128,
-    batch_size=64,
+    num_games=128,
+    num_workers=1,
+    batch_size=1,
     use_gpu=true,
     reset_every=2,
     flip_probability=0.,
@@ -91,13 +91,13 @@ network_player = Benchmark.NetworkOnly(τ=0.5)
 
 benchmark_sim = SimParams(
   arena.sim;
-  num_games=20,
-  num_workers=20,
-  batch_size=20,
+  num_games=5,
+  num_workers=5,
+  batch_size=5,
   alternate_colors=false)
 
 benchmark = [
-  Benchmark.Duel(alphazero_player, mcts_baseline,   benchmark_sim),
+# Benchmark.Duel(alphazero_player, mcts_baseline,   benchmark_sim),
 # Benchmark.Duel(alphazero_player, minmax_baseline, benchmark_sim),
   Benchmark.Duel(network_player,   mcts_baseline,   benchmark_sim),
 # Benchmark.Duel(network_player,   minmax_baseline, benchmark_sim)
