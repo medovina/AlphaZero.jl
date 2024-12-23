@@ -1,0 +1,1 @@
+julia --project -e 'using AlphaZero; Scripts.train("tictactoe")'

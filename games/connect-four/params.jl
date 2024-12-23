@@ -14,7 +14,7 @@ netparams = NetLib.ResNetHP(
 
 self_play = SelfPlayParams(
   sim=SimParams(
-    num_games=5000,
+    num_games=256,
     num_workers=128,
     batch_size=64,
     use_gpu=true,
@@ -91,9 +91,9 @@ network_player = Benchmark.NetworkOnly(τ=0.5)
 
 benchmark_sim = SimParams(
   arena.sim;
-  num_games=256,
-  num_workers=256,
-  batch_size=256,
+  num_games=20,
+  num_workers=20,
+  batch_size=20,
   alternate_colors=false)
 
 benchmark = [
